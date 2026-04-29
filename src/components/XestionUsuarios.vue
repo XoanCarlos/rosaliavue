@@ -44,19 +44,31 @@
 
           <div class="radio-group">
             <label>
-              <input type="radio" value="particular" v-model="novoUsuario.tipoCuenta" />
+              <input
+                type="radio"
+                value="particular"
+                v-model="novoUsuario.tipoCuenta"
+              />
               Particular
             </label>
 
             <label>
-              <input type="radio" value="empresa" v-model="novoUsuario.tipoCuenta" />
+              <input
+                type="radio"
+                value="empresa"
+                v-model="novoUsuario.tipoCuenta"
+              />
               Empresa
             </label>
           </div>
         </div>
       </div>
 
-      <button type="submit" class="btn-guardar">
+      <button
+        type="submit"
+        class="btn-guardar"
+        :disabled="novoUsuario.dni === '' || novoUsuario.nome === ''"
+      >
         Gardar
       </button>
     </form>
@@ -67,10 +79,12 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>DNI</th>
+          <th>DNI/CIF</th>
           <th>Nome</th>
           <th>Correo</th>
           <th>Provincia</th>
+          <th>Activo</th>
+          <th>Tipo de conta</th>
           <th>Accións</th>
         </tr>
       </thead>
@@ -78,19 +92,18 @@
       <tbody>
         <tr v-for="(u, index) in usuarios" :key="index">
           <td>{{ index + 1 }}</td>
-          <td>{{ u.dni }}</td>
+          <td style="text-align: center">{{ u.dni }}</td>
           <td>{{ u.nome }}</td>
           <td>{{ u.correo }}</td>
           <td>{{ u.provincia }}</td>
-
-          <td>
-            <button @click="editarUsuario(index)">✏️</button>
-            <button @click="eliminarUsuario(index)">🗑️</button>
+          <td style="text-align: center">{{ u.activo ? "✅" : "❌" }}</td>
+          <td>{{ u.tipoCuenta }}</td>
+          <td style="text-align: center">
+            <button @click="editarUsuario(index)" title="Editar">✏️</button>
+            <button @click="eliminarUsuario(index)" title="Eliminar">🗑️</button>
 
             <!-- SeN params, SeN store -->
-            <router-link to="/tarefas">
-              📝 Tarefas
-            </router-link>
+            <router-link to="/tarefas"> 📝 Tarefas </router-link>
           </td>
         </tr>
       </tbody>

@@ -17,6 +17,15 @@
       "activo": true,
       "tipoCuenta": "particular",
       "id": 2
+    },
+    {
+      "dni": "5555555",
+      "nome": "Salome Cantaora",
+      "correo": "cataw@mail.com",
+      "provincia": "Lugo",
+      "activo": false,
+      "tipoCuenta": "empresa",
+      "id": 3
     }
   ],
   "tarefas": [

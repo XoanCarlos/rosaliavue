@@ -2,7 +2,7 @@
   "usuarios": [
     {
       "dni": "00000000T",
-      "nome": "Juan Sin Nombre",
+      "nome": "Juan Sin ",
       "correo": "juan@gmail.com",
       "provincia": "Lugo",
       "activo": true,
@@ -21,14 +21,16 @@
   ],
   "tarefas": [
     {
-      "completada": true,
-      "id": 1
-    },
-    {
       "titulo": "Claustro",
       "dataLimite": "2026-04-14",
       "completada": true,
       "id": 2
+    },
+    {
+      "titulo": "Comisión económica",
+      "dataLimite": "2026-04-22",
+      "completada": true,
+      "id": 3
     }
   ]
 }

@@ -110,8 +110,11 @@ async function completarTarefa(index) {
 
 <style scoped>
 .xestion-tarefas {
-  width: 80vw;
-  max-width: 1000px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 👈 centra horizontalmente todo */
   background: white;
   padding: 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -152,12 +155,17 @@ async function completarTarefa(index) {
   align-self: center;   /* centra o botón */
 }
 
+.tabla-container {
+  display: flex;
+  justify-content: center;
+}
+
 table {
-  width: 100%;
+  width: 80%;
+  max-width: 1000px;
   border-collapse: collapse;
   margin-top: 1rem;
 }
-
 th,
 td {
   border: 1px solid #ddd;

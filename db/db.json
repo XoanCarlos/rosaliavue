@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "dni": "00000000T",
+      "nome": "Juan Sin Nombre",
+      "correo": "juan@gmail.com",
+      "provincia": "Lugo",
+      "activo": true,
+      "tipoCuenta": "particular",
+      "id": 1
+    },
+    {
+      "dni": "1111111A",
+      "nome": "Margarita Flor Blanca",
+      "correo": "blanca@mail.com",
+      "provincia": "Pontevedra",
+      "activo": true,
+      "tipoCuenta": "particular",
+      "id": 2
+    }
+  ],
+  "tarefas": [
+    {
+      "completada": true,
+      "id": 1
+    },
+    {
+      "titulo": "Claustro",
+      "dataLimite": "2026-04-14",
+      "completada": true,
+      "id": 2
+    }
+  ]
+}
